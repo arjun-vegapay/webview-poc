@@ -76,6 +76,33 @@
         cursor: pointer;
       }
     </style>
+    <script type="text/javascript">
+      function displayModal(message) {
+        document.getElementById("message").textContent = "Clciked " + message;
+        document.getElementById("modal")?.classList.remove("display-none");
+      }
+
+      function removeModal() {
+        document.getElementById("modal")?.classList.add("display-none");
+      }
+
+      function onlyShowRedContainer() {
+        document
+          .getElementById("green-container")
+          .classList.add("display-none");
+        document.getElementById("blue-container").classList.add("display-none");
+      }
+      function onlyShowGreenContainer() {
+        document.getElementById("red-container").classList.add("display-none");
+        document.getElementById("blue-container").classList.add("display-none");
+      }
+      function onlyShowBlueContainer() {
+        document.getElementById("red-container").classList.add("display-none");
+        document
+          .getElementById("green-container")
+          .classList.add("display-none");
+      }
+    </script>
   </head>
   <body>
     <div class="flex-center display-none" id="modal">
@@ -129,15 +156,5 @@
         </div>
       </div>
     </section>
-    <script type="text/javascript">
-      function displayModal(message) {
-        document.getElementById("message").textContent = "Clciked " + message;
-        document.getElementById("modal")?.classList.remove("display-none");
-      }
-
-      function removeModal() {
-        document.getElementById("modal")?.classList.add("display-none");
-      }
-    </script>
   </body>
 </html>
